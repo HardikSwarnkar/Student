@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+     <!--CSS File-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar section -->
+      <div class="row1 Navbar" id="Navbar"><p>Student Enrollment Form</p></div>
+
+      <!-- Main content section -->
+      <div class="row2 main-content">
+        <div class="container-md">
+          <!-- Left part of the application FORM -->
+          <div id="LeftPart" class="col-md-6" style="background-color: white">
+            <!--form elements -->
+            <form id="enrollForm" name="enrollmentform">
+              <!-- A container with a medium size is created to hold the form elements -->
+              <div class="container-md">
+                <!-- A row is created to display the Name field -->
+                <div class="row">
+                  <div class="col-sm">Name</div>
+                  <div class="col-sm">
+                    <input
+                      name="textname"
+                      type="text"
+                      id="name"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <!-- A row is created to display the Email field -->
+                <div class="row">
+                  <div class="col-sm">Email</div>
+                  <div class="col-sm">
+                    <input
+                      size="50"
+                      name="emailadd"
+                      type="email"
+                      id="emailid"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <!-- A row is created to display the Website field -->
+                <div class="row">
+                  <div class="col-sm">Website</div>
+                  <div class="col-sm">
+                    <input
+                      name="weblink"
+                      type="website"
+                      id="websiteLink"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <!-- A row is created to display the Image Link field -->
+                <div class="row">
+                  <div class="col-sm">Image Link</div>
+                  <div class="col-sm">
+                    <input
+                      name="img"
+                      type="url"
+                      id="imgLink"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <!-- A row is created to display the Gender field -->
+                <div class="row">
+                  <div class="col-sm">Gender</div>
+                  <!-- Two radio buttons are created for the user to select the student's gender -->
+                  <div class="col-sm">
+                    <input
+                      id="gender"
+                      type="radio"
+                      name="gender"
+                      value="Male"
+                      class="form-control-sm"
+                    />Male
+
+                    <input
+                      id="gender"
+                      type="radio"
+                      name="gender"
+                      value="Female"
+                      class="form-control-sm"
+                    />Female
+                  </div>
+                </div>
+                <!-- A row is created to display the Skills field -->
+                <div class="row">
+                  <div class="col-sm">Skills</div>
+                  <div class="col-sm">
+                    <label class="checkbox-inline"
+                      ><input
+                        id="skill"
+                        type="checkbox"
+                        name="skill"
+                        value="C#"
+                      />C#
+                    </label>
+                    <label class="checkbox-inline"
+                      ><input
+                        id="skill"
+                        type="checkbox"
+                        name="skill"
+                        value="HTML"
+                      />HTML
+                    </label>
+                    <label class="checkbox-inline"
+                      ><input
+                        id="skill"
+                        type="checkbox"
+                        name="skill"
+                        value="CSS"
+                      />CSS</label
+                    >
+                  </div>
+                </div>
+                <!-- Two buttons are created for the user to enroll the student or clear the form -->
+                <div class="row">
+                  <div class="col-sm">
+                    <button
+                      id="enrollbtn"
+                      onclick="addRow(); "
+                      type="button"
+                      class="btn btn-primary btn-md"
+                    >
+                      Enroll Student
+                    </button>
+                  </div>
+                  <div class="col-sm">
+                    <button
+                      id="resetbtn"
+                      type="reset"
+                      class="btn btn-danger btn-md"
+                    >
+                      Clear
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Right half  for the card-->
+          <div
+            id="RightPart"
+            class="col-md-6"
+            style="background-color: rgb(246, 248, 248)"
+          >
+            <!-- Enrolled students table -->
+            <p id="SubHeading">Enrolled Students</p>
+
+            <div class="Responsive" style="width: 100%">
+              <table
+                id="Card"
+                class="table table-bordered"
+                cellpadding="0"
+                cellspacing="0"
+              >
+                <thead>
+                  <tr class="tablehead">
+                    <th>Description</th>
+                    <th>Image</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- rows adding dynamically using js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer>
+        <!-- Copyright -->
+        Copyright 2023-2024 By Fresher Training
+      </footer>
+    </div>
+    <!-- Javacript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

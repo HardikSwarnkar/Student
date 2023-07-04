@@ -1,0 +1,116 @@
+/* Navbar style*/
+#Navbar {
+  width: 100%;
+  height: 40px;
+  padding: 2px;
+  text-align: center;
+  color: white;
+  background-color: rgb(72, 197, 149);
+  font: 20px/1 sans-serif;
+  border: 1px solid black;
+}
+
+/*Footer style */
+footer {
+  height: auto;
+  width: auto;
+  padding: 0;
+  text-align: center;
+  color: white;
+  background: rgb(72, 197, 149);
+  border: 1px solid black;
+}
+/* The LeftPart style of the form*/
+
+#LeftPart {
+  float: left;
+  height: 520px;
+  padding-top: 50px;
+  padding-left: 5%;
+  padding-right: 8%;
+  border-left: 1px black solid;
+  border-right: 3px rgb(72, 197, 149) solid;
+}
+
+/* The RightPart style of the application */
+#RightPart {
+  float: right;
+  border-right: 1px black solid;
+  height: 520px;
+}
+
+/* Card style */
+#Card {
+  margin: 4% auto 0;
+  width: 80%;
+  border: 2px solid #90a381;
+}
+input[type='checkbox'],
+input[type='radio'] {
+  width: 10px;
+  height: 10px;
+}
+tr:nth-child(even) {
+  background-color: rgb(220, 235, 192);
+}
+#Card th {
+  background-color: rgb(179, 207, 125);
+  border: 2px solid #b5cda3;
+}
+#Card td {
+  text-align: left;
+  font-size: small;
+  padding-left: 7px;
+  border: 2px solid #b5cda3;
+}
+.row {
+  padding: 4px;
+  text-align: left;
+}
+img {
+  width: 100px;
+  height: 100px;
+  margin: 6px auto;
+  display: block;
+  background-size: contain;
+}
+.Responsive {
+  height: 400px;
+  overflow-y: auto;
+}
+.tablehead {
+  color: white;
+}
+.tablehead th {
+  width: fit-content;
+  font-size: small;
+}
+
+/*Subheading "Enrolles students"*/
+#SubHeading {
+  margin-top: 10px;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+}
+#tablerow {
+  animation: fadein 3s ease forwards;
+}
+
+/* Fade effect and media query */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 769px) {
+  #LeftPart {
+    border-right: 1px solid black;
+  }
+  #RightPart {
+    border-left: 1px solid black;
+  }
+}
